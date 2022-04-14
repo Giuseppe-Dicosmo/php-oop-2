@@ -26,9 +26,11 @@ var_dump($prodotti1);
 $utente = new user (
   "fabio",
   "tizio",
-  "gdfsgsdfndftftggbre"
+  "fabio@gmail.com"
 );
 
 var_dump($utente);
-$utente->setMail("pippo");
-var_dump($utente); // modifica e-mail
+// modifica del utente
+$utente->setMail("pippo@gmail.com");
+$utente->setNameLastname("pippo", "sasso");
+var_dump($utente);
