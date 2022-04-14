@@ -20,17 +20,29 @@ $prodotti1 = new cibo(
   "media"
 );
 
-var_dump($prodotti1);
+// var_dump($prodotti1);
 
 //! UTENTI
+//? utente non Iscritto
 $utente = new user (
   "fabio",
   "tizio",
-  "fabio@gmail.com"
+  "fabio@gmail.com",
 );
 
 var_dump($utente);
+
 // modifica del utente
 $utente->setMail("pippo@gmail.com");
-$utente->setNameLastname("pippo", "sasso");
+$utente->setName("pippo");
+$utente->setLastname("sasso");
 var_dump($utente);
+
+//? utente Iscrit
+$utente_registrato = new registeredUser (
+  "carlo",
+  "vedoni",
+  "carlo@gmail.com",
+  "dddddddddddddddddd"
+);
+var_dump($utente_registrato);
