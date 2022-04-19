@@ -2,6 +2,7 @@
 
 require __DIR__ . "./classi/prodotti.php";
 require __DIR__ . "./classi/utenti.php";
+require __DIR__ . "./classi/carta_di_credito.php";
 
 // public $img;
 // public $titolo;
@@ -33,12 +34,12 @@ $utente = new user (
 var_dump($utente);
 
 // modifica del utente
-$utente->setMail("pippo@gmail.com");
-$utente->setName("pippo");
-$utente->setLastname("sasso");
-var_dump($utente);
+// $utente->setMail("pippo@gmail.com");
+// $utente->setName("pippo");
+// $utente->setLastname("sasso");
+// var_dump($utente);
 
-//? utente Iscrit
+//? utente Iscrito
 $utente_registrato = new registeredUser (
   "carlo",
   "vedoni",
@@ -46,3 +47,16 @@ $utente_registrato = new registeredUser (
   "dddddddddddddddddd"
 );
 var_dump($utente_registrato);
+
+//! carta di credito
+$carta_utente = new card (
+  "carlo vedoni",
+  1234567891234567,
+  "03-23",
+  223
+);
+var_dump($carta_utente);
+
+$pim = date("m-y");
+
+var_dump($pim);
